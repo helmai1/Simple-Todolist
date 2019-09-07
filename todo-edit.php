@@ -1,5 +1,5 @@
 <?php
-   $title = "Edit Todo";
+   $title = "Edit Kontak";
    include "layouts/header.php";
    include "function.php";
 
@@ -7,7 +7,6 @@
    
    $todo = query("SELECT * FROM todo WHERE id = '$id'")[0];
 ?>
-
 
 <div class="row p-3 m-3">   
    <div class="col-md-12 mb-3">
@@ -26,15 +25,28 @@
             autofocus="on" required
             value="<?= $todo['name'] ?>"> <br>
 
-         <label for="description">Description</label>
-         <textarea name="description" 
-            id="description" cols="30" rows="5"
+         <label for="email">Email</label>
+         <textarea name="email" 
+            id="email" cols="30" rows="5"
             class="form-control"
-            placeholder="Input todo description . . ." required><?= $todo['description'] ?></textarea> <br>
-      
+            placeholder="Input todo email . . ." required><?= $todo['email'] ?></textarea> <br>
+
+         <label for="name">No Telepon</label>
+         <input type="text" 
+            name="notelp" 
+            id="notelp"
+            class="form-control"
+            placeholder="Input No Telepon . . ." 
+            autofocus="on" required
+            value="<?= $todo['notelp'] ?>"> <br>
+         
          <input type="submit" name="submit"
             value="Update" 
             class="btn btn-warning btn-block">
+           
+         <a href="index.php" 
+                     class="btn btn-primary btn-block" >Back</a>
+         
       </form>
    </div>
 </div>

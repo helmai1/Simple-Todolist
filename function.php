@@ -18,9 +18,10 @@
     global $koneksi;
 
     $name = htmlspecialchars($data['name']);
-    $description = htmlspecialchars($data['description']);
+    $email = htmlspecialchars($data['email']);
+    $notelp = htmlspecialchars($data['notelp']);
 
-    $query = "INSERT INTO todo VALUES (NULL, '$name', '$description') ";
+    $query = "INSERT INTO todo VALUES (NULL, '$name', '$email', '$notelp') ";
     mysqli_query($koneksi, $query);
 
     return mysqli_affected_rows($koneksi);
@@ -31,11 +32,13 @@
     global $koneksi;
 
     $name = htmlspecialchars($data['name']);
-    $description = htmlspecialchars($data['description']);
+    $email = htmlspecialchars($data['email']);
+    $notelp = htmlspecialchars($data['notelp']);
 
     $query = "UPDATE todo SET 
             name = '$name',
-            description = '$description'
+            email = '$email',
+            notelp = '$notelp'
             WHERE id = '$id'";
 
     mysqli_query($koneksi, $query);

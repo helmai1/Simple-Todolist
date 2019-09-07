@@ -21,11 +21,19 @@
             placeholder="Input todo name . . ." 
             autofocus="on" required> <br>
 
-         <label for="description">Description</label>
-         <textarea name="description" 
-            id="description" cols="30" rows="5"
+         <label for="email">Email</label>
+         <textarea name="email" 
+            id="email" cols="30" rows="5"
             class="form-control"
-            placeholder="Input todo description . . ." required></textarea> <br>
+            placeholder="Input todo email . . ." required></textarea> <br>
+
+            <label for="name">No Telepon</label>
+         <input type="number" 
+            name="notelp" 
+            id="notelp"
+            class="form-control"
+            placeholder="no telepon . . ." 
+            autofocus="on" required> <br>
       
          <input type="submit" name="submit"
             value="Save" 
